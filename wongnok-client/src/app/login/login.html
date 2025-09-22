@@ -1,0 +1,8 @@
+<p>login works!</p>
+<form >
+  <input type="text" id="username" name="username" [(ngModel)]="username">
+  <input type="password" id="password" name="password" [(ngModel)]="password">
+  <button (click)="onLogin()" >Login</button>
+</form>
+<hr>
+<button (click)="onKeycloakLogin()">Keycloak Login</button>

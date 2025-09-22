@@ -1,0 +1,29 @@
+// users.read.validate.http
+### case valid token
+GET http://localhost:3000/api/v1/users/u105
+Authorization: Bearer VALID_TOKEN
+
+
+### case no token
+### no login = 401
+GET http://localhost:3000/api/v1/users/u101
+
+
+### case invalid token
+### logged in but token not valid = 403 
+GET http://localhost:3000/api/v1/users/u101
+Authorization: Bearer INVALID_TOKEN
+
+### case: login
+# @name u105
+POST http://localhost:3000/api/v1/auth/login
+Content-Type: application/json
+{
+  "username": "u105",
+  "password": "changeit"
+}
+
+### case: valid token
+# @ref u105
+GET http://localhost:3000/api/v1/users/me
+Authorization: Bearer {{u105.accessToken}}

@@ -1,0 +1,20 @@
+# --- Default rule ---
+* text=auto
+
+# --- Scripts ---
+*.sh   text eol=lf
+*.bat  text eol=crlf
+
+# --- Common configs ---
+*.yml  text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+
+# --- Binary (no newline conversion) ---
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.pdf  binary
+*.zip  binary
+*.jar  binary
