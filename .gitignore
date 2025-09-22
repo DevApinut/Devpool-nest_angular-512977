@@ -5,7 +5,7 @@ postgres/postgres-data/
 #next-wongnok
 wongnok-api/node_modules/
 wongnok-client/node_modules/
-certs/
+certs
 
 # Logs
 *.log
