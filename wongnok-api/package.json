@@ -30,6 +30,7 @@
     "@nestjs/typeorm": "^11.0.0",
     "bcrypt": "^6.0.0",
     "cookie-parser": "^1.4.7",
+    "nestjs-paginate": "^12.8.3",
     "nestjs-zod": "^5.0.1",
     "openid-client": "^6.8.0",
     "passport": "^0.7.0",

@@ -10,6 +10,7 @@ import { APP_PIPE } from '@nestjs/core';
 import { ZodValidationPipe } from 'nestjs-zod';
 import { AuthModule } from './auth/auth.module';
 import { ConfigifyModule } from '@itgorillaz/configify';
+import { FoodRecipesModule } from './food-recipes/food-recipes.module';
 
 @Module({
   imports: [
@@ -24,7 +25,8 @@ import { ConfigifyModule } from '@itgorillaz/configify';
     DifficultiesModule,
     CookingDurationsModule,
     UsersModule,
-    AuthModule
+    AuthModule,
+    FoodRecipesModule
   ],
   controllers: [AppController],
   providers: [

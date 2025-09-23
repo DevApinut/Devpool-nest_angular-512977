@@ -11,6 +11,18 @@ export class DifficultiesService {
     private readonly repository: Repository<Difficulty>
   ) { }
 
+  // for init to create data
+  async onModuleInit() {
+    const count = await this.repository.count();
+    if (count === 0) {
+      await this.repository.save([
+        { name: 'Easy' },
+        { name: 'Medium' },
+        { name: 'Hard' },        
+      ]);
+    }
+  }
+
   findAll() {
     return this.repository.find();
   }
